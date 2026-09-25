@@ -1,0 +1,608 @@
+/* =========================================================
+   PAGE PESAN
+========================================================= */
+
+.pesan-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(232, 183, 74, 0.12),
+      transparent 28rem
+    ),
+    #f7f5ef;
+  color: #26382d;
+}
+
+
+/* =========================================================
+   HERO / INTRO
+========================================================= */
+
+.order-page {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 150px 0 90px;
+}
+
+.order-page > .section-label {
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.order-page > h1 {
+  max-width: 760px;
+  margin: 0;
+
+  font-size: clamp(2.6rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+
+  color: #2d513b;
+}
+
+.order-intro {
+  max-width: 650px;
+  margin: 26px 0 0;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  color: #647166;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.order-form {
+  display: grid;
+  gap: 24px;
+
+  margin-top: 55px;
+}
+
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.form-section {
+  padding: 38px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(45, 81, 59, 0.1);
+  border-radius: 28px;
+
+  box-shadow:
+    0 16px 50px rgba(36, 53, 41, 0.05);
+}
+
+.form-section > h2 {
+  margin: 0 0 30px;
+
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  letter-spacing: -0.035em;
+
+  color: #2d513b;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.form-section label {
+  display: block;
+
+  margin-top: 22px;
+
+  font-size: 0.92rem;
+  font-weight: 700;
+
+  color: #34463a;
+}
+
+.form-section label:first-of-type {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+  width: 100%;
+
+  margin-top: 9px;
+  padding: 15px 16px;
+
+  font: inherit;
+  color: #26382d;
+
+  background: #fbfaf7;
+
+  border: 1px solid #deddd5;
+  border-radius: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-section input:hover,
+.form-section select:hover,
+.form-section textarea:hover {
+  border-color: rgba(45, 81, 59, 0.3);
+}
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+  background: #ffffff;
+
+  border-color: #d7a52c;
+
+  box-shadow:
+    0 0 0 4px rgba(215, 165, 44, 0.13);
+}
+
+.form-section textarea {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   REQUIRED / OPTIONAL
+========================================================= */
+
+.required-label,
+.optional-label {
+  display: inline-flex;
+
+  margin-left: 8px;
+  padding: 3px 8px;
+
+  border-radius: 999px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  vertical-align: middle;
+}
+
+.required-label {
+  color: #a23d32;
+
+  background: #fff0ed;
+}
+
+.optional-label {
+  color: #7c807b;
+
+  background: #f0efe9;
+}
+
+
+/* =========================================================
+   PACKAGE CONTENT
+========================================================= */
+
+.package-contents {
+  margin-top: 18px;
+  padding: 18px 20px;
+
+  background: #f3f6ef;
+
+  border-left: 4px solid #d7a52c;
+  border-radius: 0 16px 16px 0;
+
+  color: #465648;
+}
+
+.package-contents strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #2d513b;
+}
+
+.package-contents p {
+  margin: 0;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   ADD ORDER
+========================================================= */
+
+.add-order-button {
+  width: 100%;
+
+  margin-top: 28px;
+  padding: 17px 22px;
+
+  font: inherit;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  background: #2d513b;
+
+  border: none;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-order-button:hover {
+  background: #1f3c2a;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(45, 81, 59, 0.18);
+}
+
+
+/* =========================================================
+   ORDER SUMMARY
+========================================================= */
+
+.order-summary {
+  margin-top: 32px;
+  padding: 26px;
+
+  background: #f6f3e9;
+
+  border: 1px solid rgba(215, 165, 44, 0.3);
+  border-radius: 22px;
+}
+
+.order-summary h3 {
+  margin: 0 0 18px;
+
+  font-size: 1.2rem;
+
+  color: #2d513b;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid rgba(45, 81, 59, 0.1);
+}
+
+.order-item:last-of-type {
+  border-bottom: none;
+}
+
+.order-item strong {
+  color: #2d513b;
+}
+
+.order-item p {
+  margin: 8px 0 0;
+
+  font-size: 0.88rem;
+  line-height: 1.7;
+
+  color: #697268;
+}
+
+.order-item > div:last-child {
+  min-width: 150px;
+
+  text-align: right;
+}
+
+.remove-order {
+  display: block;
+
+  margin: 10px 0 0 auto;
+
+  padding: 0;
+
+  color: #b54b40;
+
+  background: transparent;
+
+  border: none;
+
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.remove-order:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(45, 81, 59, 0.15);
+}
+
+.order-total span {
+  color: #697268;
+}
+
+.order-total strong {
+  font-size: 1.5rem;
+
+  color: #2d513b;
+}
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.form-note {
+  margin: 12px 0 0;
+
+  font-size: 0.82rem;
+  line-height: 1.7;
+
+  color: #788076;
+}
+
+
+/* =========================================================
+   FINAL SUMMARY
+========================================================= */
+
+.final-summary {
+  padding: 32px;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(215, 165, 44, 0.2),
+      transparent 22rem
+    ),
+    #2d513b;
+
+  border-radius: 28px;
+}
+
+.final-summary > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 0.9rem;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.final-summary > strong {
+  display: block;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.final-summary p {
+  max-width: 560px;
+
+  margin: 15px 0 0;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.submit-order {
+  width: 100%;
+
+  padding: 21px 28px;
+
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+
+  color: #2d513b;
+
+  background: #e2b33d;
+
+  border: none;
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.submit-order:hover {
+  background: #edbf48;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 30px rgba(215, 165, 44, 0.24);
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.floating-whatsapp {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 18px 12px 12px;
+
+  color: #ffffff;
+
+  background: #2d513b;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 16px 35px rgba(22, 43, 30, 0.24);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.floating-whatsapp:hover {
+  color: #ffffff;
+
+  background: #1f3c2a;
+
+  transform: translateY(-3px);
+}
+
+.floating-whatsapp-icon {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  color: #2d513b;
+
+  background: #e2b33d;
+
+  border-radius: 13px;
+}
+
+.floating-whatsapp-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-whatsapp-text small {
+  font-size: 0.68rem;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.floating-whatsapp-text strong {
+  margin-top: 2px;
+
+  font-size: 0.86rem;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .order-page {
+    width: min(100% - 28px, 1120px);
+
+    padding: 120px 0 65px;
+  }
+
+  .order-page > h1 {
+    font-size: clamp(2.4rem, 13vw, 3.7rem);
+  }
+
+  .order-intro {
+    font-size: 0.96rem;
+  }
+
+  .form-section {
+    padding: 25px 18px;
+
+    border-radius: 22px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .order-item > div:last-child {
+    text-align: left;
+  }
+
+  .remove-order {
+    margin-left: 0;
+  }
+
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+
+    padding: 10px;
+  }
+
+  .floating-whatsapp-text {
+    display: none;
+  }
+
+  .floating-whatsapp-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 15px;
+  }
+}

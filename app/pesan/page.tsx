@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import "./pesan.css";
 
 type OrderItem = {
   id: number;
@@ -60,12 +63,12 @@ const kambing = [
 ];
 
 const nasiKotak = [
-  { type: "A", price: 13000, desc: "Nasi, acar, pisang, air mineral gelas, & kerupuk" },
-  { type: "B", price: 16000, desc: "Nasi, acar, pisang, kerupuk, & kentang balado" },
-  { type: "C", price: 19000, desc: "Nasi, acar, pisang, kerupuk, kentang balado, & telur" },
-  { type: "D", price: 24000, desc: "Nasi, acar, pisang, kerupuk, kentang balado, & ayam potong 8" },
-  { type: "E", price: 25000, desc: "Nasi, acar, pisang, kerupuk, telur, & ayam potong 8" },
-  { type: "F", price: 27000, desc: "Nasi, acar, pisang, kerupuk, kentang balado, telur, & ayam potong 8" },
+  { type: "A", price: 13000, desc: "Nasi, pisang, air mineral gelas, & kerupuk" },
+  { type: "B", price: 16000, desc: "Nasi, pisang, kerupuk, & kentang balado" },
+  { type: "C", price: 19000, desc: "Nasi, pisang, kerupuk, kentang balado, & telur" },
+  { type: "D", price: 24000, desc: "Nasi, pisang, kerupuk, kentang balado, & ayam potong 8" },
+  { type: "E", price: 25000, desc: "Nasi, pisang, kerupuk, telur, & ayam potong 8" },
+  { type: "F", price: 27000, desc: "Nasi, pisang, kerupuk, kentang balado, telur, & ayam potong 8" },
   { type: "G", price: 28000, desc: "Nasi, pisang, kerupuk, ayam potong 4 atau daging, sambal, & lalap" },
   { type: "H", price: 31000, desc: "Nasi, pisang, kerupuk, kentang balado, ayam potong 4 atau daging, sambal, & lalap" },
   { type: "I", price: 34000, desc: "Nasi, pisang, kerupuk, kentang balado, telur, ayam potong 4 atau daging, sambal, & lalap" },
@@ -272,32 +275,32 @@ export default function Pesan() {
     {
       type: "A",
       price: 13000,
-      desc: "Nasi, acar, pisang, air mineral gelas, & kerupuk",
+      desc: "Nasi, pisang, air mineral gelas, & kerupuk",
     },
     {
       type: "B",
       price: 16000,
-      desc: "Nasi, acar, pisang, kerupuk, & kentang balado",
+      desc: "Nasi,pisang, kerupuk, & kentang balado",
     },
     {
       type: "C",
       price: 19000,
-      desc: "Nasi, acar, pisang, kerupuk, kentang balado, & telur",
+      desc: "Nasi, pisang, kerupuk, kentang balado, & telur",
     },
     {
       type: "D",
       price: 24000,
-      desc: "Nasi, acar, pisang, kerupuk, kentang balado, & ayam potong 8",
+      desc: "Nasi, pisang, kerupuk, kentang balado, & ayam potong 8",
     },
     {
       type: "E",
       price: 25000,
-      desc: "Nasi, acar, pisang, kerupuk, telur, & ayam potong 8",
+      desc: "Nasi, pisang, kerupuk, telur, & ayam potong 8",
     },
     {
       type: "F",
       price: 27000,
-      desc: "Nasi, acar, pisang, kerupuk, kentang balado, telur, & ayam potong 8",
+      desc: "Nasi, pisang, kerupuk, kentang balado, telur, & ayam potong 8",
     },
     {
       type: "G",
@@ -466,13 +469,8 @@ const [boxJumlah, setBoxJumlah] = useState("");
       })
       .join("\n\n");
 
-    const promo = promoChecked
-      ? "Saya ingin mengikuti promo yang sedang berlaku. Mohon konfirmasi apakah pesanan memenuhi syarat promo."
-      : "Tidak mengikuti promo.";
 
       const message = `*FORMULIR PEMESANAN MITRA AQIQAH*
-
-      *STATUS: MENUNGGU KONFIRMASI*
       
       *1. DATA PEMESAN*
       • Atas nama: ${nama}
@@ -499,10 +497,7 @@ Setelah mengirim pesanan ini, saya akan mengirimkan share location melalui Whats
       *TOTAL SEMENTARA*
       ${formatPrice(total)}
       
-      *5. PROMO*
-      ${promo}
-      
-      *6. CATATAN*
+      *5. CATATAN*
       ${catatan}
       
       Pesanan ini masih menunggu konfirmasi admin.
@@ -522,29 +517,10 @@ Setelah mengirim pesanan ini, saya akan mengirimkan share location melalui Whats
   const currentPorsi = ekor === 1 ? porsi1 : porsi2;
 
   return (
-    <main>
-      <header>
-        <div>
-          <strong>Mitra Aqiqah</strong>
-        </div>
-
-        <nav>
-          <a href="/">Home</a>
-          <a href="/paket">Paket & Harga</a>
-          <a href="/#faq">FAQ</a>
-          <a href="/#tentang">Tentang</a>
-
-          <a
-            className="whatsapp-button"
-            href="https://wa.me/6285102473444"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Hubungi WhatsApp
-          </a>
-        </nav>
-      </header>
-
+    <>
+      <main className="pesan-page">
+        <Header active="pesan" />
+  
       <section className="order-page">
         <div className="section-label">PEMESANAN</div>
 
@@ -1034,68 +1010,7 @@ Setelah mengirim pesanan ini, saya akan mengirimkan share location melalui Whats
           </div>
 
           <div className="form-section">
-            <h2>5. Promo</h2>
-
-            <div className="promo-card">
-              <div className="promo-title">
-                <strong>Promo yang sedang berlaku</strong>
-
-                <button
-                  type="button"
-                  className="promo-detail-button"
-                  onClick={() => setPromoOpen(!promoOpen)}
-                >
-                  {promoOpen ? "Tutup" : "Lihat selengkapnya →"}
-                </button>
-              </div>
-
-              <p>
-                Jika pesanan kamu memenuhi syarat promo,
-                potongan atau cashback akan dikonfirmasi oleh admin.
-              </p>
-
-              {promoOpen && (
-                <div className="promo-details">
-                  <strong>Detail & syarat promo</strong>
-
-                  <p>
-                    Promo dapat memiliki syarat dan ketentuan
-                    tertentu. Detail promo dapat diperbarui
-                    sesuai periode yang sedang berjalan.
-                  </p>
-
-                  <ul>
-                    <li>Promo tidak otomatis mengurangi total harga.</li>
-                    <li>
-                      Potongan atau cashback harus dikonfirmasi admin.
-                    </li>
-                    <li>
-                      Syarat promo mengikuti ketentuan yang berlaku.
-                    </li>
-                  </ul>
-                </div>
-              )}
-
-              <label className="promo-check">
-                <input
-                  type="checkbox"
-                  checked={promoChecked}
-                  onChange={(event) =>
-                    setPromoChecked(event.target.checked)
-                  }
-                />
-                <span>Saya ingin mengikuti promo ini</span>
-              </label>
-
-              <small>
-                Potongan atau cashback akan dikonfirmasi setelah
-                pesanan dikonfirmasi melalui WhatsApp.
-              </small>
-            </div>
-          </div>
-
-          <div className="form-section">
-            <h2>6. Catatan</h2>
+            <h2>5. Catatan</h2>
 
             <label>
               Catatan khusus
@@ -1112,10 +1027,6 @@ Setelah mengirim pesanan ini, saya akan mengirimkan share location melalui Whats
             <span>Total sementara</span>
             <strong>{formatPrice(total)}</strong>
 
-            <p>
-              Harga promo atau cashback belum dipotong.
-              Konfirmasi akhir dilakukan melalui WhatsApp.
-            </p>
           </div>
 
           <button className="submit-order" type="submit">
@@ -1123,56 +1034,23 @@ Setelah mengirim pesanan ini, saya akan mengirimkan share location melalui Whats
           </button>
         </form>
       </section>
+      <a
+        href="https://wa.me/6285102473444"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-whatsapp"
+        aria-label="Hubungi Mitra Aqiqah melalui WhatsApp"
+      >
+        <span className="floating-whatsapp-icon">☏</span>
 
-      <footer>
-        <div>
-          <strong>Mitra Aqiqah</strong>
-          <p>Mudah Dipesan, Amanah Disajikan.</p>
-        </div>
-
-        <div className="footer-links">
-          <a href="/">Home</a>
-          <a href="/paket">Paket & Harga</a>
-          <a href="/#faq">FAQ</a>
-          <a href="/tentang">Tentang</a>
-
-          <a
-            href="https://wa.me/6285102473444"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp
-          </a>
-
-          <a
-            href="https://instagram.com/mitra_aqiqah"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-
-          <a
-            href="https://www.tiktok.com/@mitra_aqiqah"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TikTok
-          </a>
-
-          <a
-            href="https://share.google/iJsA8TAK1xvVCYAhv"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Lokasi
-          </a>
-        </div>
-
-        <p className="copyright">
-          © 2026 Mitra Aqiqah. Melayani Jabodetabek.
-        </p>
-      </footer>
+        <span className="floating-whatsapp-text">
+          <small>Butuh bantuan?</small>
+          <strong>Chat WhatsApp</strong>
+        </span>
+      </a>
     </main>
-  );
+
+    <Footer />
+  </>
+);
 }

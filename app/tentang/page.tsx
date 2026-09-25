@@ -1,26 +1,11 @@
+import "./tentang.css";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 export default function Tentang() {
+  
   return (
-    <main>
-      <header>
-        <div>
-          <strong>Mitra Aqiqah</strong>
-        </div>
-
-        <nav>
-          <a href="/paket">Paket & Harga</a>
-          <a href="/#faq">FAQ</a>
-          <a href="/#tentang">Tentang</a>
-
-          <a
-            className="whatsapp-button"
-            href="https://wa.me/6285102473444?text=Halo%20Mitra%20Aqiqah%2C%20saya%20mau%20tanya%20paket%20aqiqah"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Pesan Sekarang
-          </a>
-        </nav>
-      </header>
+    <main className="tentang-page">
+     <Header />
 
       <section className="about-page">
         <div className="section-label">CERITA MITRA AQIQAH</div>
@@ -94,54 +79,7 @@ export default function Tentang() {
         </a>
       </section>
 
-      <footer>
-        <div>
-          <strong>Mitra Aqiqah</strong>
-          <p>Mudah Dipesan, Amanah Disajikan.</p>
-        </div>
-
-        <div className="footer-links">
-          <a href="/paket">Paket & Harga</a>
-          <a href="/#faq">FAQ</a>
-          <a href="/#tentang">Tentang</a>
-
-          <a
-            href="https://wa.me/6285102473444"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp
-          </a>
-
-          <a
-            href="https://instagram.com/mitra_aqiqah"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-
-          <a
-            href="https://www.tiktok.com/@mitra_aqiqah"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TikTok
-          </a>
-
-          <a
-            href="https://share.google/iJsA8TAK1xvVCYAhv"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Lokasi
-          </a>
-        </div>
-
-        <p className="copyright">
-          © 2026 Mitra Aqiqah. Melayani Jabodetabek.
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }

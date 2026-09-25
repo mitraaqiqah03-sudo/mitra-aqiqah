@@ -1,0 +1,490 @@
+/* =========================
+   HALAMAN TENTANG
+========================= */
+
+.tentang-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(230, 184, 74, 0.12),
+      transparent 30%
+    ),
+    #f8f6f0;
+  color: #234b36;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.tentang-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+  padding: 18px clamp(24px, 6vw, 90px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(248, 246, 240, 0.92);
+  backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(35, 75, 54, 0.08);
+}
+
+.tentang-header > div strong {
+  display: block;
+
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+
+  color: #234b36;
+}
+
+.tentang-header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.tentang-header nav a {
+  color: #234b36;
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tentang-header nav a:hover {
+  opacity: 0.65;
+}
+
+.tentang-header .whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  background: #e6b84a;
+  color: #234b36;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+
+  box-shadow: 0 8px 20px rgba(230, 184, 74, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tentang-header .whatsapp-button:hover {
+  opacity: 1;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(230, 184, 74, 0.3);
+}
+
+
+/* =========================
+   HERO / ABOUT
+========================= */
+
+.about-page {
+  width: min(100%, 1050px);
+  margin: 0 auto;
+
+  padding:
+    clamp(80px, 10vw, 150px)
+    clamp(24px, 5vw, 70px)
+    clamp(70px, 10vw, 120px);
+}
+
+.about-page .section-label {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+
+  padding: 10px 16px;
+
+  background: #e6b84a;
+  color: #234b36;
+
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.about-page h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-size: clamp(3rem, 7vw, 6.3rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+
+  color: #234b36;
+}
+
+.about-lead {
+  max-width: 700px;
+
+  margin-top: 35px;
+
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.75;
+
+  color: rgba(35, 75, 54, 0.72);
+}
+
+
+/* =========================
+   CERITA
+========================= */
+
+.about-story {
+  position: relative;
+
+  max-width: 800px;
+
+  margin-top: 90px;
+  padding: clamp(30px, 5vw, 65px);
+
+  background: #ffffff;
+
+  border: 1px solid rgba(35, 75, 54, 0.08);
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 70px rgba(35, 75, 54, 0.08);
+}
+
+.about-story::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 7px;
+  height: 100%;
+
+  border-radius: 28px 0 0 28px;
+
+  background: #e6b84a;
+}
+
+.about-story h2 {
+  max-width: 600px;
+
+  margin:
+    0
+    0
+    26px;
+
+  font-size: clamp(1.7rem, 4vw, 2.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+
+  color: #234b36;
+}
+
+.about-story h2:not(:first-child) {
+  margin-top: 70px;
+}
+
+.about-story p {
+  margin: 0 0 22px;
+
+  font-size: 1rem;
+  line-height: 1.9;
+
+  color: rgba(35, 75, 54, 0.72);
+}
+
+
+/* =========================
+   PENUTUP
+========================= */
+
+.about-closing {
+  margin-top: 65px;
+  padding: clamp(30px, 5vw, 50px);
+
+  background: #234b36;
+
+  border-radius: 22px;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.about-closing strong {
+  display: block;
+
+  max-width: 550px;
+
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+
+  color: #f4c95d;
+}
+
+.about-closing p {
+  max-width: 600px;
+
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* =========================
+   TOMBOL KEMBALI
+========================= */
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 45px;
+  padding: 17px 28px;
+
+  background: #e6b84a;
+  color: #234b36;
+
+  text-decoration: none;
+
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 30px rgba(230, 184, 74, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.about-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(230, 184, 74, 0.32);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.tentang-footer {
+  position: relative;
+
+  margin-top: 20px;
+
+  padding:
+    clamp(60px, 8vw, 100px)
+    clamp(24px, 6vw, 90px)
+    35px;
+
+  background: #234b36;
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.tentang-footer::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -150px;
+  top: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(230, 184, 74, 0.12);
+}
+
+.tentang-footer > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.tentang-footer > div:first-child strong {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.05em;
+}
+
+.tentang-footer > div:first-child p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 1rem;
+}
+
+
+/* LINKS */
+
+.footer-links {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap:
+    14px
+    28px;
+
+  max-width: 750px;
+
+  margin-top: 45px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.78);
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #f4c95d;
+
+  transform: translateX(3px);
+}
+
+
+/* COPYRIGHT */
+
+.tentang-footer .copyright {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 65px;
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+  .tentang-header {
+    padding: 16px 22px;
+  }
+
+  .tentang-header nav {
+    gap: 14px;
+  }
+
+  .tentang-header nav a:not(.whatsapp-button) {
+    display: none;
+  }
+
+  .tentang-header .whatsapp-button {
+    padding: 10px 16px;
+
+    font-size: 0.82rem;
+  }
+
+  .about-page {
+    padding-top: 70px;
+  }
+
+  .about-story {
+    margin-top: 60px;
+
+    border-radius: 22px;
+  }
+
+  .about-story::before {
+    width: 5px;
+
+    border-radius: 22px 0 0 22px;
+  }
+
+  .about-story h2:not(:first-child) {
+    margin-top: 50px;
+  }
+
+  .footer-links {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+  .tentang-footer .copyright {
+    margin-top: 50px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .about-page h1 {
+    font-size: 3.2rem;
+  }
+
+  .about-story {
+    padding: 30px 25px;
+  }
+
+  .about-story p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}

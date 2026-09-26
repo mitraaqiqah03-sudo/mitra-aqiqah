@@ -12,13 +12,23 @@ export default function FoodSection() {
       </p>
 
       <div className="food-grid">
-        <div className="food-placeholder">Foto sate</div>
-        <div className="food-placeholder">Foto gulai</div>
-        <div className="food-placeholder">Foto semur</div>
-        <div className="food-placeholder">Foto tongseng</div>
-        <div className="food-placeholder">Foto nasi box</div>
-        <div className="food-placeholder">Foto nasi kebuli</div>
-      </div>
+  <div className="food-card">
+    <img src="/sate.png" alt="Sate kambing" />
+  </div>
+
+  <div className="food-card">
+    <img src="/gulai.png" alt="Gulai kambing" />
+  </div>
+
+  <div className="food-card">
+    <img src="/semur.png" alt="Semur kambing" />
+  </div>
+
+  <div className="food-card">
+    <img src="/tongseng.png" alt="Tongseng kambing" />
+  </div>
+
+</div>
 
       <p className="food-note">
         Terdapat berbagai pilihan menu dan olahan. Menu lainnya dapat dikonsultasikan dengan admin.

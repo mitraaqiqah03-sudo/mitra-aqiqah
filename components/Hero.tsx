@@ -36,10 +36,10 @@ export default function Hero() {
       <div className="hero-visual">
         <div className="hero-image-frame">
           <Image
-            src="/images/logo-mitra-aqiqah.png"
+            src="/nasi-spesial.png"
             alt="Mitra Aqiqah"
-            width={600}
-            height={450}
+            width={650}
+            height={550}
             priority
           />
         </div>

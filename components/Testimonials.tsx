@@ -1,5 +1,5 @@
 const testimonials = [
-  "/nasi-spesial.png",
+  "/testimoni-1.png",
   "/testimoni-2.png",
   "/testimoni-3.png",
   "/testimoni-4.png",

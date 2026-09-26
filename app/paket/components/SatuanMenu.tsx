@@ -45,19 +45,20 @@ const paketSatuan = [
     desc: 'Nasi, pisang, kerupuk, kentang balado, telur, ayam potong 4 atau daging, sambal, & lalap',
   },
 ];
+
 const pilihanMenuDaging = [
-  { name: 'Sate', image: '/menu/sate.jpg' },
-  { name: 'Semur', image: '/menu/semur.jpg' },
-  { name: 'Rendang', image: '/menu/rendang.jpg' },
-  { name: 'Teriyaki', image: '/menu/teriyaki.jpg' },
-  { name: 'Rica-rica', image: null },
-  { name: 'Kambing Guling', image: null },
+  { name: 'Sate', image: '/sate.png' },
+  { name: 'Semur', image: '/semur.png' },
+  { name: 'Rendang', image: '/rendang.png' },
+  { name: 'Teriyaki', image: '/teriyaki.png' },
+  { name: 'Rica-rica', image: '/rica-rica.png' },
+  { name: 'Kambing Guling', image: '/kambing-guling.png' },
 ];
 
 const pilihanMenuTulang = [
-  { name: 'Gulai', image: '/menu/gulai.jpg' },
-  { name: 'Sop', image: null },
-  { name: 'Tongseng', image: '/menu/tongseng.jpg' },
+  { name: 'Gulai', image: '/gulai.png' },
+  { name: 'Sop', image: '/sop.png' },
+  { name: 'Tongseng', image: '/tongseng.png' },
 ];
 
 export default function SatuanMenu() {
@@ -114,7 +115,8 @@ export default function SatuanMenu() {
 
           <p>
             Kamu bisa memilih olahan sesuai selera. Beberapa menu menggunakan
-            bagian daging, sementara menu lainnya menggunakan bagian bertulang.
+            bagian daging, sementara menu lainnya menggunakan bagian kambing
+            bertulang.
           </p>
         </div>
 
@@ -133,17 +135,8 @@ export default function SatuanMenu() {
 
           <div className="menu-grid">
             {pilihanMenuDaging.map((menu) => (
-              <article
-                className={`menu-card ${!menu.image ? 'menu-card-text' : ''}`}
-                key={menu.name}
-              >
-                {menu.image ? (
-                  <img src={menu.image} alt={menu.name} />
-                ) : (
-                  <div className="menu-image-placeholder">
-                    <span>{menu.name}</span>
-                  </div>
-                )}
+              <article className="menu-card" key={menu.name}>
+                <img src={menu.image} alt={menu.name} />
 
                 <div className="menu-card-name">{menu.name}</div>
               </article>
@@ -166,17 +159,8 @@ export default function SatuanMenu() {
 
           <div className="menu-grid menu-grid-small">
             {pilihanMenuTulang.map((menu) => (
-              <article
-                className={`menu-card ${!menu.image ? 'menu-card-text' : ''}`}
-                key={menu.name}
-              >
-                {menu.image ? (
-                  <img src={menu.image} alt={menu.name} />
-                ) : (
-                  <div className="menu-image-placeholder">
-                    <span>{menu.name}</span>
-                  </div>
-                )}
+              <article className="menu-card" key={menu.name}>
+                <img src={menu.image} alt={menu.name} />
 
                 <div className="menu-card-name">{menu.name}</div>
               </article>
@@ -184,115 +168,116 @@ export default function SatuanMenu() {
           </div>
         </div>
       </section>
+
+      {/* YANG DIDAPATKAN */}
+
       <section className="included-section">
-  <div className="souvenir-showcase">
-    <div className="souvenir-hero-image">
-      <img
-        src="/souvenir/souvenir-mitra-aqiqah.jpg"
-        alt="Souvenir Mitra Aqiqah"
-      />
-    </div>
+        <div className="souvenir-showcase">
+          <div className="souvenir-hero-image">
+            <img
+              src="/souvenir-mitra-aqiqah.png"
+              alt="Souvenir Mitra Aqiqah"
+            />
+          </div>
 
-    <div className="souvenir-description">
-      <div className="section-label">YANG DIDAPATKAN</div>
+          <div className="souvenir-description">
+            <div className="section-label">YANG DIDAPATKAN</div>
 
-      <h2>Kenang-kenangan untuk keluarga.</h2>
-
-      <p>
-        Setiap pemesanan aqiqah mendapatkan souvenir khusus sebagai
-        kenang-kenangan untuk keluarga dan si kecil.
-      </p>
-
-      <div className="souvenir-items">
-        <div className="souvenir-item">
-          <span>01</span>
-
-          <div>
-            <strong>Sertifikat aqiqah berbingkai</strong>
+            <h2>Kenang-kenangan untuk keluarga.</h2>
 
             <p>
-              Sertifikat sebagai kenang-kenangan momen aqiqah si kecil.
+              Setiap pemesanan aqiqah mendapatkan souvenir khusus sebagai
+              kenang-kenangan untuk keluarga dan si kecil.
             </p>
+
+            <div className="souvenir-items">
+              <div className="souvenir-item">
+                <span>01</span>
+
+                <div>
+                  <strong>Sertifikat aqiqah berbingkai</strong>
+
+                  <p>
+                    Sertifikat sebagai kenang-kenangan momen aqiqah si kecil.
+                  </p>
+                </div>
+              </div>
+
+              <div className="souvenir-item">
+                <span>02</span>
+
+                <div>
+                  <strong>Totebag souvenir</strong>
+
+                  <p>
+                    Totebag untuk menyimpan perlengkapan souvenir dari
+                    Mitra Aqiqah.
+                  </p>
+                </div>
+              </div>
+
+              <div className="souvenir-item">
+                <span>03</span>
+
+                <div>
+                  <strong>Boneka domba atau mug foto</strong>
+
+                  <p>
+                    Kenang-kenangan khusus yang dapat menjadi bagian dari
+                    momen kelahiran si kecil.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="souvenir-item">
-          <span>02</span>
+        {/* UNTUK SETIAP PORSI */}
 
-          <div>
-            <strong>Totebag souvenir</strong>
+        <div className="included-groups">
+          <div className="included-group">
+            <div className="included-group-heading">
+              <div>
+                <h3>Untuk setiap porsi</h3>
 
-            <p>
-              Totebag untuk menyimpan perlengkapan souvenir dari
-              Mitra Aqiqah.
-            </p>
+                <p>
+                  Pelengkap yang disiapkan bersama nasi kotak untuk dibagikan
+                  kepada keluarga dan tamu.
+                </p>
+              </div>
+            </div>
+
+            <div className="included-grid">
+              <article className="included-card">
+                <div className="included-card-number">01</div>
+
+                <h4>Kartu dan buku ucapan</h4>
+
+                <p>
+                  Pelengkap ucapan yang disiapkan untuk setiap nasi kotak
+                  yang dibagikan.
+                </p>
+              </article>
+
+              <article className="included-card">
+                <div className="included-card-number">02</div>
+
+                <h4>Kantong plastik nasi kotak</h4>
+
+                <p>
+                  Kantong plastik disiapkan untuk memudahkan membawa dan
+                  membagikan nasi kotak.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
 
-        <div className="souvenir-item">
-          <span>03</span>
-
-          <div>
-            <strong>Boneka domba atau mug foto</strong>
-
-            <p>
-              Kenang-kenangan khusus yang dapat menjadi bagian dari
-              momen kelahiran si kecil.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* UNTUK SETIAP PORSI */}
-
-  <div className="included-groups">
-    <div className="included-group">
-      <div className="included-group-heading">
-    
-
-        <div>
-          <h3>Untuk setiap porsi</h3>
-
-          <p>
-            Pelengkap yang disiapkan bersama nasi kotak untuk dibagikan
-            kepada keluarga dan tamu.
-          </p>
-        </div>
-      </div>
-
-      <div className="included-grid">
-        <article className="included-card">
-          <div className="included-card-number">01</div>
-
-          <h4>Kartu dan buku ucapan</h4>
-
-          <p>
-            Pelengkap ucapan yang disiapkan untuk setiap nasi kotak
-            yang dibagikan.
-          </p>
-        </article>
-
-        <article className="included-card">
-          <div className="included-card-number">02</div>
-
-          <h4>Kantong plastik nasi kotak</h4>
-
-          <p>
-            Kantong plastik disiapkan untuk memudahkan membawa dan
-            membagikan nasi kotak.
-          </p>
-        </article>
-      </div>
-    </div>
-  </div>
-
-  <p className="included-note">
-    Jenis souvenir dapat dikonfirmasi kepada admin saat melakukan
-    pemesanan.
-  </p>
-</section>
+        <p className="included-note">
+          Jenis souvenir dapat dikonfirmasi kepada admin saat melakukan
+          pemesanan.
+        </p>
+      </section>
     </>
   );
 }

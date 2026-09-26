@@ -2680,3 +2680,47 @@ body {
     transform: none;
   }
 }
+/* TESTIMONIAL GALLERY */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.testimonial-card {
+  overflow: hidden;
+  border-radius: 16px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.testimonial-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* HP */
+@media (max-width: 700px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .testimonial-card img {
+    border-radius: 12px;
+  }
+}
